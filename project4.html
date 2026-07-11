@@ -3,56 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - My Full Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f1f1;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #2196F3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        
-        a:hover {
-            background-color: #0b7dda;
-        }
-    </style>
+    <title>Speech-Based Music Player — Pratham Buddhadev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
-    <div class="container">
-        <h1>Speech based music player in Android Application and Python</h1>
-        
-        <p>
-            <strong>Project Description:</strong> Developed a speech-based music player application for Android and Python platforms. The application allows users to play music and provides personalized music recommendations based on natural language processing (NLP) integration and machine learning (ML) algorithms. Users can use voice commands to control the music playback and interact with the application. The application is integrated with online music platforms to fetch and recommend relevant music based on the user's preferences and listening habits. It provides an intuitive and interactive music experience for users, making it easy and enjoyable to discover and listen to their favorite songs.
+<body class="project-page" data-project="musicplayer">
+
+    <header class="p-header">
+        <div class="max-width">
+            <div class="p-eyebrow">Case study</div>
+            <h1>Speech-Based Music Player</h1>
+            <div class="p-tags">
+                <span>Python</span><span>Kotlin</span><span>NLP</span><span>Machine Learning</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="p-body">
+        <div class="p-label">Project description</div>
+        <p class="description">
+            Developed a speech-based music player application for Android and Python platforms. The application
+            allows users to play music and provides personalized recommendations based on natural language
+            processing (NLP) and machine learning (ML) algorithms.
         </p>
-        <a href="./index.html" class="btn">Back to Projects</a>
-    </div>    
+        <p class="description">
+            Users can use voice commands to control playback and interact with the application, which is integrated
+            with online music platforms to fetch and recommend music based on listening habits — making it easy and
+            enjoyable to discover new songs.
+        </p>
+
+        <!-- video preview appears here automatically once a YouTube link is added in projects-data.js -->
+        <div class="video-embed-container"></div>
+
+        <div class="p-label" style="margin-top: 50px;">Project resources</div>
+        <div class="p-resources"><!-- buttons injected by project-resources.js --></div>
+
+        <a href="./index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a>
+    </div>
+
+    <script src="projects-data.js"></script>
+    <script src="project-resources.js"></script>
 </body>
 </html>

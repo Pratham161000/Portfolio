@@ -3,55 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 - My Full Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f1f1;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #2196F3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        
-        a:hover {
-            background-color: #0b7dda;
-        }
-    </style>
+    <title>V-Crush Oil — Pratham Buddhadev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
-    <div class="container">
-        <h1>Website Development for V-Crush Oil - My Full Project</h1>
-        <p>
-            <strong>Project Description:</strong> Built V-Crush Oil, a user-friendly e-commerce website with diverse product offerings. Integrated admin functionalities for sales tracking, data analysis, and customer management. V-Crush Oil provides an exceptional shopping experience with its user-centric design and powerful backend tools. The project was based on client requirements and the website is live at <a href="http://vcrushoil.com/">http://vcrushoil.com/</a>.
+<body class="project-page" data-project="vcrush">
+
+    <header class="p-header">
+        <div class="max-width">
+            <div class="p-eyebrow">Case study</div>
+            <h1>Website Development for V-Crush Oil</h1>
+            <div class="p-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Bootstrap</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="p-body">
+        <div class="p-label">Project description</div>
+        <p class="description">
+            Built V-Crush Oil, a user-friendly e-commerce website with diverse product offerings. Integrated admin
+            functionalities for sales tracking, data analysis, and customer management. V-Crush Oil provides an
+            exceptional shopping experience through its user-centric design and powerful backend tools.
         </p>
-        <a href="./index.html" class="btn">Back to Projects</a>
-    </div>    
+        <p class="description">
+            The project was based on client requirements and is live at
+            <a href="http://vcrushoil.com/" target="_blank" rel="noopener" style="color: var(--brass); border-bottom: 1px solid var(--brass);">vcrushoil.com</a>.
+        </p>
+
+        <!-- video preview appears here automatically once a YouTube link is added in projects-data.js -->
+        <div class="video-embed-container"></div>
+
+        <div class="p-label" style="margin-top: 50px;">Project resources</div>
+        <div class="p-resources"><!-- buttons injected by project-resources.js --></div>
+
+        <a href="./index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a>
+    </div>
+
+    <script src="projects-data.js"></script>
+    <script src="project-resources.js"></script>
 </body>
 </html>

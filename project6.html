@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Disease Detection from X-Ray Images — Pratham Buddhadev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body class="project-page" data-project="lungdisease">
+
+    <header class="p-header">
+        <div class="max-width">
+            <div class="p-eyebrow">Deep learning / computer vision</div>
+            <h1>Lung Disease Detection from X-Ray Images</h1>
+            <div class="p-tags">
+                <span>Python</span><span>TensorFlow</span><span>CNN</span><span>ResNet50</span><span>VGG16</span><span>OpenCV</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="p-body">
+        <div class="p-label">Project description</div>
+        <p class="description">
+            Built a deep learning pipeline, with Dhanrajsinh Parmar, to classify lung diseases from chest X-ray
+            images. Three architectures — a custom Convolutional Neural Network, ResNet50, and VGG16 — were
+            trained and compared, with each model's top layers fine-tuned to adapt to the classification task.
+        </p>
+        <p class="description">
+            The workflow covers the full pipeline: loading and organizing the X-ray dataset into classes, applying
+            image augmentation via Keras' Image Data Generator, training each model with early stopping to guard
+            against overfitting, and evaluating results with accuracy and loss curves plotted across training
+            epochs. The final trained ResNet50 model is saved as a portable HDF5 file for reuse without retraining.
+        </p>
+        <p class="description">
+            The project design was informed by a review of related research on integrating deep learning with
+            hand-crafted image features for diagnosing pneumonia and tuberculosis — comparing that paper's
+            approach against this project's own architecture choices and identifying hand-crafted feature fusion
+            as a promising direction for future improvement.
+        </p>
+
+        <!-- video preview appears here automatically once a YouTube link is added in projects-data.js -->
+        <div class="video-embed-container"></div>
+
+        <div class="p-label" style="margin-top: 50px;">Project resources</div>
+        <div class="p-resources"><!-- buttons injected by project-resources.js --></div>
+
+        <a href="./index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a>
+    </div>
+
+    <script src="projects-data.js"></script>
+    <script src="project-resources.js"></script>
+</body>
+</html>

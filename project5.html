@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Medical Diagnosis System (OMDS) — Pratham Buddhadev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body class="project-page" data-project="omds">
+
+    <header class="p-header">
+        <div class="max-width">
+            <div class="p-eyebrow">Final year project — Marwadi University</div>
+            <h1>Online Medical Diagnosis System (OMDS)</h1>
+            <div class="p-tags">
+                <span>Python / Flask</span><span>Firebase</span><span>JavaScript</span><span>PHP</span><span>Kotlin</span><span>XAMPP</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="p-body">
+        <div class="p-label">Project description</div>
+        <p class="description">
+            OMDS is a symptom-based online medical diagnosis platform built as a final-year B.Tech (ICT) project
+            at Marwadi University, guided by Prof. Harikesh Chauhan. It connects patients and doctors: patients
+            log in, select their symptoms, and the system generates likely related conditions along with health
+            monitoring tips, while also surfacing their medical history and letting them book appointments directly
+            with a doctor.
+        </p>
+        <p class="description">
+            On the backend, the system pairs a Python Flask API with a Firebase real-time database for secure,
+            up-to-date data, while PHP handles select server-side processing against MySQL. A companion Android
+            app, built in Kotlin, extends the experience on mobile — including an integrated "OMDS ChatMachine"
+            assistant that answers health queries in natural language. Doctors get their own dashboard to manage
+            clinic hours, view appointments, and write patient reports with medicines, tests, and precautions.
+        </p>
+
+        <div class="p-label" style="margin-top: 50px;">How it works</div>
+        <p class="description">
+            A patient logs in, provides their symptoms, and the system checks whether it has enough information
+            to narrow things down — looping back for more detail if needed — before displaying a diagnosis and
+            tailored health monitoring tips.
+        </p>
+        <img src="images/omds-flowchart.png" alt="OMDS process flowchart: login, select symptoms, generate diagnosis, health monitoring tips"
+             style="width:100%; max-width:520px; display:block; margin: 24px auto; border-radius:4px; border:1px solid var(--rule);">
+
+        <p class="description">
+            The sequence diagram below shows the full interaction across the user, the system, its database, and
+            the attending doctor — from login and symptom selection through to appointment booking.
+        </p>
+        <img src="images/omds-sequence-diagram.png" alt="OMDS sequence diagram showing interaction between User, System, Database, and Doctor"
+             style="width:100%; border-radius:4px; border:1px solid var(--rule); margin-top: 20px;">
+
+        <!-- video preview appears here automatically once a YouTube link is added in projects-data.js -->
+        <div class="video-embed-container"></div>
+
+        <div class="p-label" style="margin-top: 50px;">Project resources</div>
+        <div class="p-resources"><!-- buttons injected by project-resources.js --></div>
+
+        <a href="./index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a>
+    </div>
+
+    <script src="projects-data.js"></script>
+    <script src="project-resources.js"></script>
+</body>
+</html>
