@@ -23,7 +23,7 @@ vcrush: {
 
 Leave either field as `""` and that project page will simply show a "coming soon" button instead of breaking — so you can fill these in gradually, project by project.
 
-The project keys already match your seven current projects:
+The project keys already match your eight current projects:
 | Key | Project |
 |---|---|
 | `vcrush` | V-Crush Oil website |
@@ -33,6 +33,21 @@ The project keys already match your seven current projects:
 | `musicplayer` | Speech-based music player |
 | `omds` | Online Medical Diagnosis System |
 | `lungdisease` | Lung Disease Detection from X-Ray Images |
+| `olp` | OLP-forStudents (WordPress learning platform) |
+
+## New: OLP-forStudents
+Added as `project7.html`, with a homepage card. This project came with a project-review PDF and a demo
+**video file** rather than a YouTube link, so:
+- **`assets/OLP-forStudents-Project-Review.pdf`** — wired up as the "View project PDF" button.
+- **`assets/olp-forstudents-demo.mp4`** — your recorded demo, embedded directly on the page using a
+  native HTML5 video player (with its own play/pause/fullscreen controls), and the "Watch demo video"
+  button opens the same file.
+
+**Note on the video file:** at ~70 MB, it's within GitHub's per-file limit (100 MB) so it will upload and work
+fine, but it will make your repo heavier and may load a little slowly for visitors on slower connections.
+If you'd rather keep things lightweight, uploading it to YouTube (unlisted is fine) and pasting that link
+into `projects-data.js` instead works exactly the same way — the system supports both a YouTube link
+or a local video file in the same `video` field, and picks the right player automatically.
 
 ## New: Lung Disease Detection from X-Ray Images
 Added as `project6.html`, with a homepage card. This one already had both a PDF and a YouTube link:
@@ -57,7 +72,7 @@ Make sure to upload the new `assets/` and the two new `images/` files into your 
 1. Replace the old `index.html`, `style.css`, `script.js`, and `project*.html` files in your `Portfolio` repo with these new versions (now including `project5.html` for OMDS).
 2. Add the two new script files, `projects-data.js` and `project-resources.js`, to the repo root (same folder as `index.html`).
 3. Your existing `images/` folder doesn't need to change for the first five projects — those pages still reference `images/Pratham.jpeg` and `images/Pratham.jpg`, which you already have live. For OMDS, add the two new files from the `images/` folder in this download (`omds-flowchart.png`, `omds-sequence-diagram.png`) into your repo's `images/` folder.
-4. Add a new `assets/` folder to your repo root and upload `OMDS-Project-Report.pdf` and `Lung-Disease-Detection-Research-Review.pdf` into it.
+4. Add a new `assets/` folder to your repo root and upload `OMDS-Project-Report.pdf`, `Lung-Disease-Detection-Research-Review.pdf`, `OLP-forStudents-Project-Review.pdf`, and `olp-forstudents-demo.mp4` into it.
 5. Commit and push — GitHub Pages will rebuild automatically at your existing link:
    https://pratham161000.github.io/Portfolio/
 

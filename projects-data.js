@@ -46,6 +46,11 @@ const projectsData = {
     lungdisease: {
         pdf: "assets/Lung-Disease-Detection-Research-Review.pdf",
         video: "https://youtu.be/Cf1kk59fN2o?si=JPZUrWdvvdpwVMzW"
+    },
+
+    olp: {
+        pdf: "assets/OLP-forStudents-Project-Review.pdf",
+        video: "assets/olp-forstudents-demo.mp4"
     }
 
 };

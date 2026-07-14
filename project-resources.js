@@ -1,5 +1,7 @@
 /* Renders the PDF / video resource buttons on each project detail page,
-   reading from projects-data.js so links only need to be edited in one place. */
+   reading from projects-data.js so links only need to be edited in one place.
+   The "video" field can be either a YouTube URL or a path to a self-hosted
+   video file (e.g. "assets/demo.mp4") — both are handled automatically. */
 document.addEventListener("DOMContentLoaded", function () {
     var page = document.querySelector(".project-page");
     if (!page) return;
@@ -9,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var resourceContainer = document.querySelector(".p-resources");
     var videoContainer = document.querySelector(".video-embed-container");
+    var isLocalVideoFile = data.video && /\.(mp4|webm|ogg|mov)$/i.test(data.video.split("?")[0]);
 
     // PDF button
     if (resourceContainer) {
@@ -33,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
             videoBtn.target = "_blank";
             videoBtn.rel = "noopener";
             videoBtn.className = "resource-btn";
-            videoBtn.innerHTML = '<i class="fab fa-youtube"></i> Watch demo video';
+            videoBtn.innerHTML = isLocalVideoFile
+                ? '<i class="fas fa-film"></i> Watch demo video'
+                : '<i class="fab fa-youtube"></i> Watch demo video';
         } else {
             videoBtn.href = "#";
             videoBtn.className = "resource-btn is-disabled";
@@ -44,12 +49,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Embedded video preview (only shows if a link is set)
     if (videoContainer && data.video) {
-        var videoId = extractYouTubeId(data.video);
-        if (videoId) {
+        if (isLocalVideoFile) {
             videoContainer.innerHTML =
-                '<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/' +
-                videoId +
-                '?rel=0&modestbranding=1" title="Project demo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+                '<video class="self-hosted-video" controls preload="metadata" src="' +
+                data.video +
+                '">Your browser does not support the video tag.</video>';
+        } else {
+            var videoId = extractYouTubeId(data.video);
+            if (videoId) {
+                videoContainer.innerHTML =
+                    '<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/' +
+                    videoId +
+                    '?rel=0&modestbranding=1" title="Project demo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+            }
         }
     }
 
