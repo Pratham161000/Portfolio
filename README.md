@@ -76,6 +76,13 @@ Make sure to upload the new `assets/` and the two new `images/` files into your 
 5. Commit and push — GitHub Pages will rebuild automatically at your existing link:
    https://pratham161000.github.io/Portfolio/
 
+## New: CRM diagrams
+`project1.html` (the CRM case study) now includes four UML diagrams pulled straight from your project
+documentation — use case, activity, sequence, and class diagrams — added to the repo's `images/`
+folder as `crm-usecase-diagram.jpg`, `crm-activity-diagram.jpg`, `crm-sequence-diagram.jpg`, and
+`crm-class-diagram.jpg`. Make sure these four land in your repo's `images/` folder alongside the OMDS
+diagrams.
+
 ## What changed in the design
 - New palette: deep navy + warm brass accent, warm paper background — a subtler, more "CV/letterhead" feel than the old crimson theme.
 - Typography: a serif display face (headings) paired with a clean sans body face and a monospace utility face for labels — evokes a printed résumé.

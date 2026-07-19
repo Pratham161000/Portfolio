@@ -32,6 +32,37 @@
             and contributing to the overall success of the university's operations.
         </p>
 
+        <div class="p-label" style="margin-top: 50px;">System design</div>
+        <p class="description">
+            The use case diagram below outlines the two core roles in the system — an Admin user who manages
+            student records, and other authenticated users who can view student information — both gated behind
+            Gmail login.
+        </p>
+        <img src="images/crm-usecase-diagram.jpg" alt="CRM use case diagram showing Admin and Other User roles"
+             style="width:100%; max-width:600px; display:block; margin: 24px auto; border-radius:4px; border:1px solid var(--rule);">
+
+        <p class="description">
+            The activity diagram traces what happens after login: the system branches based on whether the user
+            is an admin or another authenticated user, each following their own path to view or add student info
+            before logging out.
+        </p>
+        <img src="images/crm-activity-diagram.jpg" alt="CRM activity diagram showing login branching into Admin and Other User flows"
+             style="width:100%; max-width:600px; display:block; margin: 24px auto; border-radius:4px; border:1px solid var(--rule);">
+
+        <p class="description">
+            The sequence diagram shows the interaction across pages as an admin views user info, adds and shows
+            student info, and logs out.
+        </p>
+        <img src="images/crm-sequence-diagram.jpg" alt="CRM sequence diagram showing interactions between Admin Page, User Info, Add Student Info, Show Student Info, and Logout"
+             style="width:100%; border-radius:4px; border:1px solid var(--rule); margin-top: 20px;">
+
+        <p class="description" style="margin-top: 34px;">
+            And the class diagram documents the underlying data model — student records, professor profiles, and
+            the login flow for both the primary professor and other authenticated users.
+        </p>
+        <img src="images/crm-class-diagram.jpg" alt="CRM class diagram showing addstudentdetails, listoutofstudents, ProfessorProfile, and otherloginuser classes"
+             style="width:100%; border-radius:4px; border:1px solid var(--rule); margin-top: 20px;">
+
         <!-- video preview appears here automatically once a YouTube link is added in projects-data.js -->
         <div class="video-embed-container"></div>
 
