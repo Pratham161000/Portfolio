@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Web Developer", "Front-end Developer", "Passionate Learner", "Aspiring Full Stack Developer"],
+        strings: ["Web Developer", "Front-end Developer", "Freelance Web Developer", "Data Analyst", "Passionate Learner", "Aspiring Full Stack Developer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -70,4 +70,20 @@ $(document).ready(function(){
             }
         }
     });
+
+    // scroll-reveal animation for .reveal elements
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && revealEls.length){
+        var revealObserver = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+                if (entry.isIntersecting){
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(function(el){ revealObserver.observe(el); });
+    } else {
+        revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+    }
 });
