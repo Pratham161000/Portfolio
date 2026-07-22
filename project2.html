@@ -11,10 +11,10 @@
 
     <header class="p-header">
         <div class="max-width">
-            <div class="p-eyebrow">Case study</div>
+            <div class="p-eyebrow">Advance Web Technology project — Marwadi University</div>
             <h1>Single and Group Chat Application</h1>
             <div class="p-tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React.js</span><span>Node.js</span><span>MongoDB</span>
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React.js</span><span>Node.js</span><span>Socket.IO</span><span>MongoDB</span>
             </div>
         </div>
     </header>
@@ -22,14 +22,34 @@
     <div class="p-body">
         <div class="p-label">Project description</div>
         <p class="description">
-            Built a real-time single and group chat application using React.js for the frontend, Node.js for the
-            backend, and MongoDB for data storage. The application allows users to have one-on-one conversations as
-            well as participate in group chats.
+            Built with Dhanrajsinh Parmar as an Advance Web Technology (01CT0625) coursework project at Marwadi
+            University, this is a real-time single and group chat application using React.js for the frontend,
+            Node.js and Express with Socket.IO for the backend, and MongoDB for data storage. Users register and
+            sign in, search the list of other registered users, and start a one-on-one conversation or create a
+            group chat with several people at once.
         </p>
         <p class="description">
-            Messages are delivered in real time, providing a seamless communication experience. The project
-            demonstrates a full-stack approach to building a modern chat application.
+            Messages are delivered in real time over sockets, with full chat history kept per conversation and
+            per group so nothing gets lost between sessions. Group chats support adding multiple members at
+            creation time and showing each member's messages inline, while the one-on-one view lets a user jump
+            back and forth between contacts from a single chat list. The app also includes secure authentication,
+            input validation, and structured error handling for server-side and network issues.
         </p>
+
+        <div class="p-label" style="margin-top: 50px;">System design</div>
+        <p class="description">
+            After signing up and logging in, a user picks between chatting one-on-one with someone from their
+            contact list or creating a group first — both paths converge back to the same chat experience.
+        </p>
+        <img src="images/chatapp-flowchart.png" alt="Chat Application flowchart showing login leading into one-on-one or group chat paths"
+             style="width:100%; max-width:520px; display:block; margin: 24px auto; border-radius:4px; border:1px solid var(--rule);">
+
+        <p class="description">
+            The sequence diagram traces a full session: signing up, signing in, browsing the user list, chatting
+            individually or forming a group, and finally logging out.
+        </p>
+        <img src="images/chatapp-sequence-diagram.png" alt="Chat Application sequence diagram showing interaction between user, signup, signin, user list, individual chat, group chat, and logout"
+             style="width:100%; border-radius:4px; border:1px solid var(--rule); margin-top: 20px;">
 
         <!-- video preview appears here automatically once a YouTube link is added in projects-data.js -->
         <div class="video-embed-container"></div>

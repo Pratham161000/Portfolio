@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Match Outcome Prediction — Pratham Buddhadev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body class="project-page">
+
+    <header class="p-header">
+        <div class="max-width">
+            <div class="p-eyebrow">Machine learning — Marwadi University</div>
+            <h1>IPL Match Outcome Prediction</h1>
+            <div class="p-tags">
+                <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Random Forest</span><span>Google Colab</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="p-body">
+        <div class="p-label">Project description</div>
+        <p class="description">
+            A Machine Learning coursework project (Subject 01CT1509) that predicts IPL match outcomes, built in
+            Google Colab and backed by two datasets — 756 historical matches and over 179,000 ball-by-ball
+            deliveries. Before modeling, a fair amount of the project went into exploratory analysis: visualizing
+            which teams won most often and at which stadiums, how toss decisions played out, "man of the match"
+            frequency, and win rates when batting first versus chasing.
+        </p>
+        <p class="description">
+            For the prediction itself, team names and other text fields were encoded numerically with
+            <code>LabelEncoder</code>, and two candidate models — Random Forest and Decision Tree — were compared
+            using scikit-learn. Random Forest was chosen as the final classifier since it reaches strong accuracy
+            without needing to be split across multiple models the way a single Decision Tree setup would. The
+            trained model was then run against a held-out set of fixtures to predict winners for the IPL 2020
+            season.
+        </p>
+
+        <p class="description">
+            As part of the same coursework, I also reviewed a related published paper, <em>"Dynamic cricket match
+            outcome prediction"</em> (Goel et al., Journal of Sports Analytics, 2021), which predicts ball-by-ball
+            outcomes using a much wider model comparison — Logistic Regression, SVM, boosting methods, and deep
+            learning approaches like LSTM and GRU across different phases of an innings. Comparing that paper's
+            approach to this project highlighted how much prediction accuracy depends on which overs of the match
+            you're modeling, and how deep learning sequence models can edge out traditional classifiers once
+            enough of the innings has been played.
+        </p>
+
+        <div class="p-label" style="margin-top: 50px;">Project resources</div>
+        <div style="display:flex; flex-wrap:wrap; gap:18px;">
+            <a href="assets/IPL-Prediction-Project-Summary.pdf" target="_blank" rel="noopener" class="resource-btn">
+                <i class="fas fa-file-pdf"></i> View project summary
+            </a>
+            <a href="assets/IPL-Prediction-Research-Paper-Review.pdf" target="_blank" rel="noopener" class="resource-btn">
+                <i class="fas fa-book-open"></i> View research paper review
+            </a>
+            <a href="assets/IPL-Prediction-Certificate.pdf" target="_blank" rel="noopener" class="resource-btn">
+                <i class="fas fa-certificate"></i> View course certificate
+            </a>
+            <a href="https://drive.google.com/drive/folders/1DfKO-PSj5ZbOeHXisDBO4D7-iZFmXHSB?usp=sharing" target="_blank" rel="noopener" class="resource-btn">
+                <i class="fab fa-google-drive"></i> View code &amp; datasets
+            </a>
+        </div>
+
+        <a href="./index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a>
+    </div>
+
+</body>
+</html>

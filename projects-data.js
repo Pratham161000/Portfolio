@@ -24,7 +24,7 @@ const projectsData = {
     },
 
     chatapp: {
-        pdf: "",
+        pdf: "assets/Chat-Application-Project-Report.pdf",
         video: ""
     },
 
@@ -51,6 +51,11 @@ const projectsData = {
     olp: {
         pdf: "assets/OLP-forStudents-Project-Review.pdf",
         video: "assets/olp-forstudents-demo.mp4"
+    },
+
+    ordermgmt: {
+        pdf: "assets/Order-Management-Module-Report.pdf",
+        video: ""
     }
 
 };

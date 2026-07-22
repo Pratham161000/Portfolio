@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management Module — Pratham Buddhadev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body class="project-page" data-project="ordermgmt">
+
+    <header class="p-header">
+        <div class="max-width">
+            <div class="p-eyebrow">Advance Java project — Marwadi University</div>
+            <h1>Order Management Module</h1>
+            <div class="p-tags">
+                <span>Java</span><span>JSP</span><span>Servlet</span><span>Hibernate</span><span>Spring Boot</span><span>SQL</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="p-body">
+        <div class="p-label">Project description</div>
+        <p class="description">
+            Built with Dhanrajsinh Parmar as an Advance Java (01CT0623) coursework project at Marwadi University,
+            the Order Management Module is a Spring Boot web application that lets users place orders, choose a
+            payment mode, and track everything through to delivery. Users browse a list of items, enter a
+            quantity, and the system calculates the total cost before the order is submitted and stored in the
+            database.
+        </p>
+        <p class="description">
+            The module supports two transaction modes — cash on delivery and online payment — and tracks each
+            order's payment status separately from its delivery status, so both the customer and an admin can see
+            whether a payment is pending or completed, and whether an order has shipped. Every order also
+            generates a transcript with the order ID, item ID, quantity, and total, and the module includes
+            structured exception handling to catch and log system, runtime, and application-specific errors.
+        </p>
+        <p class="description">
+            Under the hood, the app follows a layered architecture — a presentation layer for user interaction, a
+            business logic layer for processing orders, and a data access layer talking to a MySQL database via
+            Hibernate — and exposes REST-style endpoints (built and tested with Postman) for adding orders, adding
+            order details, updating COD status, cancelling orders, and marking deliveries complete.
+        </p>
+
+        <div class="p-label" style="margin-top: 50px;">How it works</div>
+        <p class="description">
+            After an order's transaction mode is set, the flow branches on whether payment is cash-on-delivery or
+            online — looping on a pending state until payment is confirmed, then issuing a transaction ID before
+            the order completes.
+        </p>
+        <img src="images/ordermgmt-flowchart.png" alt="Order Management Module flowchart showing cash and online payment branches leading to a completed transaction"
+             style="width:100%; max-width:560px; display:block; margin: 24px auto; border-radius:4px; border:1px solid var(--rule);">
+
+        <p class="description">
+            The sequence diagram traces that same logic across the module's components — from the order details
+            screen through the cash and online transaction paths, the pending state, and on to a completed payment
+            with its transaction ID.
+        </p>
+        <img src="images/ordermgmt-sequence-diagram.png" alt="Order Management Module sequence diagram showing interactions between order details, transaction modes, pending, transaction id, and payment completed"
+             style="width:100%; border-radius:4px; border:1px solid var(--rule); margin-top: 20px;">
+
+        <!-- video preview appears here automatically once a YouTube link is added in projects-data.js -->
+        <div class="video-embed-container"></div>
+
+        <div class="p-label" style="margin-top: 50px;">Project resources</div>
+        <div class="p-resources"><!-- buttons injected by project-resources.js --></div>
+
+        <a href="./index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to projects</a>
+    </div>
+
+    <script src="projects-data.js"></script>
+    <script src="project-resources.js"></script>
+</body>
+</html>

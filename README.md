@@ -23,7 +23,8 @@ vcrush: {
 
 Leave either field as `""` and that project page will simply show a "coming soon" button instead of breaking — so you can fill these in gradually, project by project.
 
-The project keys already match your eight current projects:
+The project keys already match your current projects. Note: the patent page (`project8.html`) is
+standalone and doesn't use `projects-data.js` — see below.
 | Key | Project |
 |---|---|
 | `vcrush` | V-Crush Oil website |
@@ -34,6 +35,39 @@ The project keys already match your eight current projects:
 | `omds` | Online Medical Diagnosis System |
 | `lungdisease` | Lung Disease Detection from X-Ray Images |
 | `olp` | OLP-forStudents (WordPress learning platform) |
+| — | Biometric Scanner (Design Patent) — see below |
+| — | IPL Match Outcome Prediction — see below |
+
+## New: IPL Match Outcome Prediction
+Added as `project9.html`, with a homepage card. Like the patent page, this one links its resources
+directly in the HTML rather than through `projects-data.js`, since it has four documents/links rather
+than the usual PDF + video pair:
+- **`assets/IPL-Prediction-Project-Summary.pdf`** — your project summary write-up
+- **`assets/IPL-Prediction-Research-Paper-Review.pdf`** — your review of the related published paper
+  ("Dynamic cricket match outcome prediction", Goel et al., 2021)
+- **`assets/IPL-Prediction-Certificate.pdf`** — your Great Learning Academy course completion
+  certificate
+- **Google Drive link** — links straight to your existing Drive folder with the code and datasets, no
+  file needed in the repo for this one
+
+## New: Biometric Scanner — Design Patent
+Added as `project8.html`, plus a homepage carousel card and a "View patent →" link on the Biometric
+Scanner line in your About section achievements list. This page works a bit differently from the
+others: it has **four** resource documents instead of one PDF + one video, so instead of going through
+`projects-data.js` it links its resource buttons directly in the HTML. If you ever want to swap one of
+these documents out, just edit the matching `href` in `project8.html` — no need to touch
+`projects-data.js`.
+
+Resources included, all in `assets/`:
+- `Biometric-Scanner-Patent-Certificate.pdf` — the official certificate of registration
+- `Biometric-Scanner-Design-Application.pdf` — the full design application with all views (front,
+  rear, top, bottom, left, right, prospective)
+- `Biometric-Scanner-SCAMPER-Method.pdf` — the SCAMPER ideation that shaped the concept
+- `Biometric-Scanner-Design-Thinking-Deck.pdf` — the AEIOU framework + ideation/empathy mapping
+  deck (converted from your PPTX to PDF so it opens directly in the browser instead of downloading)
+
+Also added `images/biometric-scanner-prospective-view.png` — a cropped illustration pulled from the
+design application, used as the page's hero image.
 
 ## New: OLP-forStudents
 Added as `project7.html`, with a homepage card. This project came with a project-review PDF and a demo
@@ -72,7 +106,7 @@ Make sure to upload the new `assets/` and the two new `images/` files into your 
 1. Replace the old `index.html`, `style.css`, `script.js`, and `project*.html` files in your `Portfolio` repo with these new versions (now including `project5.html` for OMDS).
 2. Add the two new script files, `projects-data.js` and `project-resources.js`, to the repo root (same folder as `index.html`).
 3. Your existing `images/` folder doesn't need to change for the first five projects — those pages still reference `images/Pratham.jpeg` and `images/Pratham.jpg`, which you already have live. For OMDS, add the two new files from the `images/` folder in this download (`omds-flowchart.png`, `omds-sequence-diagram.png`) into your repo's `images/` folder.
-4. Add a new `assets/` folder to your repo root and upload `OMDS-Project-Report.pdf`, `Lung-Disease-Detection-Research-Review.pdf`, `OLP-forStudents-Project-Review.pdf`, and `olp-forstudents-demo.mp4` into it.
+4. Add a new `assets/` folder to your repo root and upload `OMDS-Project-Report.pdf`, `Lung-Disease-Detection-Research-Review.pdf`, `OLP-forStudents-Project-Review.pdf`, `olp-forstudents-demo.mp4`, the four `Biometric-Scanner-*.pdf` files, and the three `IPL-Prediction-*.pdf` files into it.
 5. Commit and push — GitHub Pages will rebuild automatically at your existing link:
    https://pratham161000.github.io/Portfolio/
 
